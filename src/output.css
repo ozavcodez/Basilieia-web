@@ -613,10 +613,6 @@ video {
   z-index: 20;
 }
 
-.m-5 {
-  margin: 1.25rem;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -675,16 +671,8 @@ video {
   margin-top: 1.25rem;
 }
 
-.mb-5 {
-  margin-bottom: 1.25rem;
-}
-
 .ml-2 {
   margin-left: 0.5rem;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
 }
 
 .mt-6 {
@@ -979,12 +967,12 @@ video {
   padding-left: 0.75rem;
 }
 
-.pl-4 {
-  padding-left: 1rem;
-}
-
 .pt-10 {
   padding-top: 2.5rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
 }
 
 .text-center {
@@ -1124,12 +1112,6 @@ video {
 
 .ease-linear {
   transition-timing-function: linear;
-}
-
-td {
-  padding: 0.75rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
 }
 
 .hover\:bg-blue-800:hover {
@@ -1543,3 +1525,5 @@ td {
     text-align: start;
   }
 }
+
+
