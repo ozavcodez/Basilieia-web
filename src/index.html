@@ -12,12 +12,12 @@
     <nav class="bg-white  px-2 sm:px-4 py-4  fixed w-full md:w-full z-20 top-0 left-0 border-b border-gray-200 ">
         <div class="container flex flex-wrap justify-between items-center mx-auto">
         <a href="" class="flex items-center">
-            <img src="images/logo2.png" class="mr-3 h-10" alt="Logo">
+            <img src="images/logo2.png" class="mr-3 w-32 sm:w-full cover h-10" alt="Logo">
             <span class="self-center text-xl font-semibold whitespace-nowrap"></span>
         </a>
         <div class="flex md:order-2">
             <a href="contact.html">
-                <button type="button" class="text-white bg-[#5e377e] hover:bg-[#372249] focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0">CONTACT US</button>
+                <button type="button" class="text-white bg-[#5e377e] hover:bg-[#372249] focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-2.5 md:px-5 py-2.5 text-center mr-3 ">CONTACT US</button>
             </a>
            
             <button onclick="openMenu()" data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 transition ease-linear duration-300" aria-controls="navbar-sticky" aria-expanded="false">
@@ -123,9 +123,9 @@
               </div>
             </div>
       </section>
-      <div style="background-image: url(images/wors.jpg); background-repeat: no-repeat; background-size: cover;" class=" items-center bg-center justify-center w-screen bg-fixed h-32 bg-text-blue-700  py-10 px-32 text-center ">
+      <div style="background-image: url(images/wors.jpg); background-repeat: no-repeat; background-size: cover;" class=" items-center bg-center justify-center w-screen bg-fixed h-32 bg-text-blue-700  py-10  text-center ">
        <span class="bg-[#5e377e] rounded-lg text-sm px-5 py-2.5 text-center text-white">
-        <a href="" class="focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg p-3">
+        <a href="volunteer.html" class="font-medium rounded-lg text-lg p-3">
             VOLUNTEER
         </a>  
        </span>
@@ -164,12 +164,24 @@
         </div>
       </div> -->
 
-     <div id="contact" class="m-10 ">
-        <div class= "">
-            <h2 class="mb-6 text-sm font-semibold text-[#5e377e] uppercase dark:text-white">Contact us</h2>
+     <div id="contact" class="md:flex justify-between md:m-10 items-center">
+        <div class="w-full md:w-2/4">
+            <h2 class="text-center py-3 md:text-start font-['Lobster'] text-lg md:text-xl font-bold text-[#5e377e] bg-opacity-40 hover:bg-opacity-30 duration-500" >Support the ministry
+            </h2>
+            <p class="mb-3 text-md font-light text-center px-3 md:px-0 md:text-start text-gray-700 md:text-md dark:text-gray-400">The ministry is charged to transform lives most especially Childrens, teenagers, young adults, and youths, bringing everyone to the deeper knowledge of Christ and to help in maximizing God's given abilities through the Holy Spirit.
+            </p>
+            <div class=" py-3 flex flex-col ">
+                <a href="support.html" class="inline-flex items-center md:items-start m-auto py-2 px-3 text-sm font-medium text-center text-white bg-[#5e377e] rounded-lg hover:bg-opacity-80 focus:ring-4 focus:outline-none ">
+                  Read more
+                  <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              </a>
+            </div>  
+        </div>    
+        <div class="p-4 w-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md sm:p-6 md:p-8">
+            <h2 class="mb-6 text-xl md:2xl font-semibold text-[#5e377e] uppercase dark:text-white">Contact us</h2>
             <ul class="text-[#5e377e] dark:text-gray-400">
                 <li class="mb-4">
-                    <a href="#" class="hover:underline">
+                    <a href="" class="hover:underline">
                         
                             <div class="flex align-center ">
                                 <svg class="w-7 h-7" fill="currentColor"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 20.9l4.95-4.95a7 7 0 1 0-9.9 0L12 20.9zm0 2.828l-6.364-6.364a9 9 0 1 1 12.728 0L12 23.728zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 2a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/></svg>
@@ -201,15 +213,16 @@
             </ul>
         </div>
      </div>
+     </div>
     
-     <footer class="p-4 mt-20  sm:p-6 ">
+     <footer class="p-4 mt-20 border-t border-[#5e377e] sm:p-6 ">
         <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
                 <a href="" class="flex items-center mb-4 sm:mb-0">
                     <img src="images/logo2.png" class="mr-3 h-10" alt=" ">
                     <!-- <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">BasilieiaVoices</span> -->
                 </a>
-                <p class="text-sm pt-10 text-start   font-light text-gray-400">
+                <p class="text-sm pt-3 md:pt-10 text-start   font-light text-gray-900">
                     Worship and serve God with your <br>whole heart and with a willing mind <br><span class="text-[#5e377e] text-sm" >1chr 28 vs 9</span>
                   </p>
             </div>
@@ -220,8 +233,17 @@
                         <li class="mb-4">
                             <a href="index.html" class="hover:underline">Home</a>
                         </li>
-                        <li>
+                        <li class="mb-4">
                             <a href="about.html" class="hover:underline">About</a>
+                        </li>
+                         <li class="mb-4">
+                            <a href="contact.html" class="hover:underline">Contact</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="volunteer.html" class="hover:underline">Volunteer</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="support.html" class="hover:underline">Support</a>
                         </li>
                     </ul>
                 </div>
@@ -229,7 +251,7 @@
                     <h2 class="mb-6 text-sm font-semibold text-[#5e377e] uppercase ">Follow us</h2>
                     <ul class="text-[#5e377e]  dark:text-gray-400">
                         <li class="mb-4">
-                            <a href="" class="hover:underline ">Facebook
+                            <a href="https://www.facebook.com/Basileiavoices" class="hover:underline ">Facebook
                         </li>
                         <li>
                             <a href="https://wa.link/l4mhcd" class="hover:underline">Whatsapp</a>
@@ -278,7 +300,7 @@
             <span class="text-sm text-[#5e377e] sm:text-center dark:text-gray-400">© 2022 <a href="index.html" class="hover:underline">Basilieia Voices</a>. All Rights Reserved.
             </span>
             <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-                <a href="#" class="text-[#5e377e] hover:text-gray-900 dark:hover:text-white">
+                <a href="https://www.facebook.com/Basileiavoices" class="text-[#5e377e] hover:text-gray-900 dark:hover:text-white">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg>
                     <span class="sr-only">Facebook page</span>
                 </a>
@@ -296,7 +318,7 @@
                 </a>
             </div>
         </div>
-      </footer>
+    </footer>
 
     <script src="index.js"></script>
     <script>

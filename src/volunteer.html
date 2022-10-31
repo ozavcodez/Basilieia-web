@@ -11,12 +11,12 @@
     <nav class="bg-white  px-2 sm:px-4 py-4  fixed w-full md:w-full z-20 top-0 left-0 border-b border-gray-200 ">
         <div class="container flex flex-wrap justify-between items-center mx-auto">
         <a href="" class="flex items-center">
-            <img src="images/logo2.png" class="mr-3 h-10" alt="Logo">
+            <img src="images/logo2.png" class="mr-3 w-32 sm:w-full cover h-10" alt="Logo">
             <span class="self-center text-xl font-semibold whitespace-nowrap"></span>
         </a>
         <div class="flex md:order-2">
             <a href="contact.html">
-                <button type="button" class="text-white bg-[#5e377e] hover:bg-[#372249] focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0">CONTACT US</button>
+                <button type="button" class="text-white bg-[#5e377e] hover:bg-[#372249] focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-2.5 md:px-5 py-2.5 text-center mr-3 ">CONTACT US</button>
             </a>
            
             <button onclick="openMenu()" data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 transition ease-linear duration-300" aria-controls="navbar-sticky" aria-expanded="false">
@@ -69,7 +69,7 @@
                 <a href="index.html" class="block py-2  pl-3 rounded md:bg-transparent text-[#5e377e] md:p-0 " aria-current="page">Home/</a>
             </li> 
             <li>
-                <a href="about.html" class="block py-2 pr-4  text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#5e377e] md:p-0 ">About</a>
+                <a href="volunteer.html" class="block py-2 pr-4  text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-[#5e377e] md:p-0 ">Volunteer</a>
             </li>
         </ul>
        </div>
@@ -88,7 +88,7 @@
                
             </div>  
         
-            <div class="bg-white md:mt-20  md:w-[40vw]  p-3 md:py-6 rounded-lg md:rounded-2xl" id="volunteer">
+            <div class="bg-white w-full  md:w-[40vw]  p-3 md:py-6 rounded-lg md:rounded-2xl" id="volunteer">
                     <h6 class=" text-xl md:font-bold font-semibold text-center">
                         VOLUNTEER
                         
@@ -98,23 +98,23 @@
                         <div class="flex flex-col items-start lg:px-6">
                             <span id="errmessage" class="text-red-600"></span>
                             
-                            <div class="flex w-72 md:w-full text-sm mt-4 ">
-                              <div class="  ">
+                            <div class="w-full text-sm mt-4 md:grid gap-2 grid-cols-2 ">
+                              <div class=" ">
                                   
-                                  <input type="text" class="border px-2 h-8 md:h-10 md:w-full rounded md:rounded-lg" id="firstname" required="required" name="Firstname" placeholder="First name">
+                                  <input type="text" class="border px-2 h-10 w-full rounded md:rounded-lg" id="firstname" required="required" name="Firstname" placeholder="First name">
                                   
                               </div>
-                              <div class="w-full ml-5">
-                                  <input type="text" class="border px-2 h-8 md:h-10 md:w-full  rounded md:rounded-lg" required="required" id="lastname" name="Lastname" placeholder="Last name" >
+                              <div class="">
+                                  <input type="text" class="border mt-2 md:mt-0 px-2 h-10 w-full  rounded md:rounded-lg" required="required" id="lastname" name="Lastname" placeholder="Last name" >
                               </div>
                             </div>
-                            <div class="flex w-72 md:w-full  text-sm mt-4">
-                              <div class="w-full ">
+                            <div class="w-full md:grid gap-2 grid-cols-2 text-sm mt-4">
+                              <div class="">
                                   
-                                  <input type="number"  class="border px-2 h-8 md:h-10 md:w-full rounded md:rounded-lg" id="phonenumber" name="Phonenumber" placeholder="Phonenumber">
+                                  <input type="number"  class="border px-2 h-10 w-full rounded md:rounded-lg" id="phonenumber" name="Phonenumber" placeholder="Phonenumber">
                               </div>
-                              <div class="w-full ml-5">
-                                  <input type="email" id="email" name="Email" class="border px-2 h-8  md:h-10 md:w-full rounded md:rounded-lg" id="" placeholder="email">
+                              <div class="w-full ">
+                                  <input type="email" id="email" name="Email" class="border mt-2 md:mt-0 px-2 h-10 w-full rounded md:rounded-lg" id="" placeholder="email">
                               </div>
                             </div>
                         <fieldset class="">
@@ -140,34 +140,34 @@
                             
                                 <div class="flex  ">
                                   <div class="flex items-center mb-4">
-                                      <input id="checkbox-1" type="radio" value="Ushering"  name="Volunteer" class="w-4  text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                      <input id="checkbox-1" type="radio" value="Ushering"  name="Volunteer" class="w-4  text-[#5e377e] bg-gray-100 rounded border-gray-300 focus:ring-blue-500 focus:ring-2 ">
                                       <label for="checkbox-1" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Ushering</label>
                                   </div>
                               
                                   <div class="flex items-center ml-20 mb-4">
-                                      <input id="checkbox-2" type="radio" value="Publicity" name="Volunteer"  class="w-4  text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                      <input id="checkbox-2" type="radio" value="Publicity" name="Volunteer"  class="w-4  text-[#5e377e] bg-gray-100 rounded border-gray-300 focus:ring-blue-500 focus:ring-2 ">
                                       <label for="checkbox-2" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Publicity</label>
                                   </div>
                                 </div>
       
                                <div class="flex "><div class="flex items-center mb-4">
-                                  <input id="checkbox-4" type="radio" value="Transportation" name="Volunteer" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                  <input id="checkbox-4" type="radio" value="Transportation" name="Volunteer" class="w-4 h-4 text-[#5e377e] bg-gray-100 rounded border-gray-300 focus:ring-blue-500 focus:ring-2 ">
                                   <label for="checkbox-4" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Transportation</label>
                               </div>
       
                                   <div class="flex items-center mb-4 ml-12">
-                                      <input id="checkbox-3" type="radio" value="Media" name="Volunteer" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                      <input id="checkbox-3" type="radio" value="Media" name="Volunteer" class="w-4 h-4 text-[#5e377e] bg-gray-100 rounded border-gray-300 focus:ring-blue-500 focus:ring-2 ">
                                       <label for="checkbox-3" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Media</label>
                                   </div>
                                     
                                </div>
                                <div class="flex">
                                   <div class="flex items-center  mb-4">
-                                      <input id="checkbox-5" type="radio" value="Welfare" name="Volunteer" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                      <input id="checkbox-5" type="radio" value="Welfare" name="Volunteer" class="w-4 h-4 text-[#5e377e] bg-gray-100 rounded border-gray-300 focus:ring-blue-500 focus:ring-2 ">
                                       <label for="checkbox-5" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Welfare</label>
                                   </div>
                                   <div class="flex items-center mb-4 ml-20">
-                                      <input id="checkbox-6" type="radio" value="Prayer" name="Volunteer" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                      <input id="checkbox-6" type="radio" value="Prayer" name="Volunteer" class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500  focus:ring-2">
                                       <label for="checkbox-6" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Prayer</label>
                                   </div>
                                </div>
@@ -186,9 +186,9 @@
         </div>
       
     </div>
-    <div style="background-image: url(images/wors.jpg); background-repeat: no-repeat; background-size: cover;" class=" items-center bg-center justify-center w-screen bg-fixed h-32 bg-text-blue-700  py-10 px-32 text-center ">
+    <div style="background-image: url(images/wors.jpg); background-repeat: no-repeat; background-size: cover;" class=" items-center bg-center justify-center w-screen bg-fixed h-32 bg-text-blue-700  py-10  text-center ">
         <span class="bg-[#5e377e] rounded-lg text-sm px-5 py-2.5 text-center  text-white">
-         <a href="" class="focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg p-3">
+         <a href="" class=" font-medium rounded-lg text-lg p-3">
              SUPPORT US
          </a>  
         </span>
@@ -202,7 +202,7 @@
                     <img src="images/logo2.png" class="mr-3 h-10" alt=" ">
                     <!-- <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">BasilieiaVoices</span> -->
                 </a>
-                <p class="text-sm pt-10 text-start   font-light text-gray-400">
+                <p class="text-sm pt-3 md:pt-10 text-start   font-light text-gray-900">
                     Worship and serve God with your <br>whole heart and with a willing mind <br><span class="text-[#5e377e] text-sm" >1chr 28 vs 9</span>
                   </p>
             </div>
@@ -213,8 +213,17 @@
                         <li class="mb-4">
                             <a href="index.html" class="hover:underline">Home</a>
                         </li>
-                        <li>
+                        <li class="mb-4">
                             <a href="about.html" class="hover:underline">About</a>
+                        </li>
+                         <li class="mb-4">
+                            <a href="contact.html" class="hover:underline">Contact</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="volunteer.html" class="hover:underline">Volunteer</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="support.html" class="hover:underline">Support</a>
                         </li>
                     </ul>
                 </div>
@@ -222,7 +231,7 @@
                     <h2 class="mb-6 text-sm font-semibold text-[#5e377e] uppercase ">Follow us</h2>
                     <ul class="text-[#5e377e]  dark:text-gray-400">
                         <li class="mb-4">
-                            <a href="" class="hover:underline ">Facebook
+                            <a href="https://www.facebook.com/Basileiavoices" class="hover:underline ">Facebook
                         </li>
                         <li>
                             <a href="https://wa.link/l4mhcd" class="hover:underline">Whatsapp</a>
@@ -271,7 +280,7 @@
             <span class="text-sm text-[#5e377e] sm:text-center dark:text-gray-400">© 2022 <a href="index.html" class="hover:underline">Basilieia Voices</a>. All Rights Reserved.
             </span>
             <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-                <a href="#" class="text-[#5e377e] hover:text-gray-900 dark:hover:text-white">
+                <a href="https://www.facebook.com/Basileiavoices" class="text-[#5e377e] hover:text-gray-900 dark:hover:text-white">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg>
                     <span class="sr-only">Facebook page</span>
                 </a>
@@ -289,7 +298,7 @@
                 </a>
             </div>
         </div>
-      </footer>
+    </footer>
     <script src="index.js"></script>
 </body>
 </html>
