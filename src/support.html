@@ -78,9 +78,9 @@
         <div class="w-full md:w-2/4">
             <h2 class="text-center py-3 md:text-start font-['Lobster'] text-3xl md:text-4xl font-bold text-[#5e377e] bg-opacity-40 hover:bg-opacity-30 duration-500" >Support the ministry
             </h2>
-            <p class="mb-3 text-md font-light text-center px-3 md:px-0 md:text-start text-gray-700 md:text-md dark:text-gray-400">The ministry is charged to transform lives most especially Childrens, teenagers, young adults, and youths, bringing everyone to the deeper knowledge of Christ and to help in maximizing God's given abilities through the Holy Spirit.
+            <p class="mb-3 text-md font-light text-center px-3 md:px-0 md:text-start text-gray-700 md:text-md dark:text-gray-400">The ministry is charged to transform lives most especially Children, teenagers, young adults, and youths, bringing everyone to the deeper knowledge of Christ and to help in maximizing God's given abilities through the Holy Spirit.
             </p>
-            <p class=" md:pt-10 mb-3 text-md font-light text-center px-3 md:px-0 md:text-start text-gray-700 md:text-md dark:text-gray-400"> We are ready and willing to do more and even more to see Christ glorified on earth as you spport our Visions with your resources and substances. 
+            <p class=" md:pt-10 mb-3 text-md font-light text-center px-3 md:px-0 md:text-start text-gray-700 md:text-md dark:text-gray-400"> We are ready and willing to do more and even more to see Christ glorified on earth as you support our Visions with your resources and substances. 
 
             </p>
         </div>     
@@ -235,15 +235,15 @@
             
         </div>
         <div class="p-4 m-auto w-full max-w-sm bg-white rounded-lg border border-gray-200 shadow-md sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
-            <form class="space-y-6" action="#" class="">
+            <form name="submit-to-google-sheet" class="space-y-6" action="#" class="">
                 <h5 class="text-xl font-medium text-gray-900 dark:text-white">We love to appreciate our Supporters</h5>
                 <div>
                     <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Name</label>
-                    <input type="text" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="" required="">
+                    <input type="text" name="Name" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="" required="">
                 </div>
                 <div>
                     <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your Email</label>
-                    <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="" required="">
+                    <input type="email" name="Email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="" required="">
                 </div>
                 <div class=" items-start">
                     
@@ -252,6 +252,8 @@
                     To learn more <a href="contact.html" class="text-[#5e377e] hover:underline">Contact us</a>
                 </div>
             </form>
+          <span class="text-md font-semibold" id="msg"></span>
+
         </div>
     </div>
   </div>
@@ -360,5 +362,22 @@
         </div>
     </footer>
     <script src="index.js"></script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzxAjr_wq94NpdqEHvTLUFxY5PRpjp7g5Ccn1lwHrmRQfBJHgBYLXimlkxFH8cxLc3M/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                 setTimeout(function(){
+                 msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 </html>

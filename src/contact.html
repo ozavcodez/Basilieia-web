@@ -164,23 +164,27 @@
        <div>
             <img src="images/feedback-pic.jpg" alt="" srcset="">
         </div>
-        <form class="w-full">
+        <div>
+            <form name="submit-to-google-sheet" class="w-full">
                  
-          <div class="flex flex-col  items-start">
-              <label class="inline-block font-semibold text-sm p-1 mt-[4px] text-[#00000099]">NAME</label>
-              <input class="block w-full border drop-shadow-md rounded-md border-[#5e377e] border-opacity-50 hover:border-[#5e377e] hover:border-2 outline-[#5e377e] bg-[#FFFFFF] p-[4px]  lg:p-[6px] text-[#000]" type="text">
-          </div>
-          <div class="flex flex-col  items-start">
-            <label class="inline-block font-semibold text-sm p-1 mt-[4px] text-[#00000099]">EMAIL</label>
-            <input class="block w-full border drop-shadow-md rounded-md border-[#5e377e] border-opacity-50 hover:border-[#5e377e] hover:border-2 outline-[#5e377e] bg-[#FFFFFF] p-[4px]  lg:p-[6px] text-[#000]" type="email">
+                <div class="flex flex-col  items-start">
+                    <label class="inline-block font-semibold text-sm p-1 mt-[4px] text-[#00000099]">NAME</label>
+                    <input name="Name" class="block w-full border drop-shadow-md rounded-md border-[#5e377e] border-opacity-50 hover:border-[#5e377e] hover:border-2 outline-[#5e377e] bg-[#FFFFFF] p-[4px]  lg:p-[6px] text-[#000]" type="text">
+                </div>
+                <div class="flex flex-col  items-start">
+                  <label class="inline-block font-semibold text-sm p-1 mt-[4px] text-[#00000099]">EMAIL</label>
+                  <input name="Email" class="block w-full border drop-shadow-md rounded-md border-[#5e377e] border-opacity-50 hover:border-[#5e377e] hover:border-2 outline-[#5e377e] bg-[#FFFFFF] p-[4px]  lg:p-[6px] text-[#000]" type="email">
+              </div>
+                <div class="flex flex-col items-start">
+                    <label class="inline-block font-semibold text-sm p-1 mt-[4px] text-[#00000099]">MESSAGE</label>
+                    <textarea name="Message" class="block w-full border drop-shadow-md rounded-md border-[#5e377e] border-opacity-50 hover:border-[#5e377e] hover:border-2 outline-[#5e377e] bg-[#FFFFFF] p-[4px] lg:p-[6px] text-[#000]" rows="3"></textarea>         
+                </div>
+                
+               <button type="submit" value="submit" class="bg-[#5e377e] mt-5 w-1/2 mx-auto border drop-shadow-md rounded-md border-[#5e377e] border-opacity-50 hover:border-[#5e377e] hover:border-2 outline-[#5e377e] text-[#FFFFFF] p-[8px] ">Submit</button>
+            </form>
+            <span class=" font-semibold text-md" id="msg"></span>
         </div>
-          <div class="flex flex-col items-start">
-              <label class="inline-block font-semibold text-sm p-1 mt-[4px] text-[#00000099]">MESSAGE</label>
-              <textarea class="block w-full border drop-shadow-md rounded-md border-[#5e377e] border-opacity-50 hover:border-[#5e377e] hover:border-2 outline-[#5e377e] bg-[#FFFFFF] p-[4px] lg:p-[6px] text-[#000]" rows="3"></textarea>         
-          </div>
-          
-         <button class="bg-[#5e377e] mt-5 w-1/2 mx-auto border drop-shadow-md rounded-md border-[#5e377e] border-opacity-50 hover:border-[#5e377e] hover:border-2 outline-[#5e377e] text-[#FFFFFF] p-[8px] ">Submit</button>
-      </form>
+       
       </div>
  </div>
     
@@ -289,5 +293,23 @@
     </div>
 </footer>
     <script src="index.js"></script>
+
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyAktPiEooLIs8zx5gPfDj17OnSNjIh9HGNRuiJ_Nc9El5fFHIBl5ud2oE57yMqJ-ep/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                 setTimeout(function(){
+                 msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 </html>
